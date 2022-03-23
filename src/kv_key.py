@@ -10,7 +10,7 @@ def main():
 
     credential = DefaultAzureCredential()
     key_client = KeyClient(
-        vault_url=f"https://{keyVaultName}.azure.net/", credential=credential
+        vault_url=f"https://{keyVaultName}.vault.azure.net/", credential=credential
     )
 
     print(f"Getting key {keyName} in key vault: {keyVaultName}")
