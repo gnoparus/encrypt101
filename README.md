@@ -1,3 +1,3 @@
 # encrypt101
-Test symmetric key encryption / decryption
-Test Azure Key Vault HSM encryption / decryption
+* Test symmetric key encryption / decryption
+* Test Azure Key Vault HSM encryption / decryption
