@@ -4,7 +4,6 @@ from azure.identity import DefaultAzureCredential
 from azure.keyvault.keys import KeyClient
 from azure.keyvault.keys.crypto import CryptographyClient, EncryptionAlgorithm
 from azure.keyvault.keys.crypto import KeyWrapAlgorithm
-from black import assert_equivalent
 
 
 def main():
