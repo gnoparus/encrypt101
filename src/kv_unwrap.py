@@ -29,8 +29,9 @@ def main():
 
     print(f"Unwraping encrypted_key")
     unwrap_result = unwrap(crypto_client, KeyWrapAlgorithm.rsa_oaep, encrypted_key)
-    print(f"unwrap_result.key = {unwrap_result.key}")
-    print(f"unwrap_result.algorithm = {unwrap_result.algorithm}")
+    print(f"unwrap_result = {unwrap_result}")
+    # print(f"unwrap_result.key = {unwrap_result.key}")
+    # print(f"unwrap_result.algorithm = {unwrap_result.algorithm}")
 
 
 async def unwrap(client, algo, key):
