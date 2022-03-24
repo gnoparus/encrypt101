@@ -29,8 +29,10 @@ def main():
     print(f"encrypted_key = {encrypted_key}")
 
     print(f"Unwraping encrypted_key")
-    unwrap_result = unwrap(crypto_client, KeyWrapAlgorithm.rsa_oaep, encrypted_key)
-    time.sleep(5)
+    # unwrap_result = unwrap(crypto_client, KeyWrapAlgorithm.rsa_oaep, encrypted_key)
+    unwrap_result = crypto_client.unwrap_key(KeyWrapAlgorithm.rsa_oaep, encrypted_key)
+
+    # time.sleep(5)
     print(f"unwrap_result = {unwrap_result}")
     print(f"unwrap_result.key = {unwrap_result.key}")
     print(f"unwrap_result.algorithm = {unwrap_result.algorithm}")
@@ -38,8 +40,8 @@ def main():
     assert key_bytes == unwrap_result.key
 
 
-def unwrap(client, algo, key):
-    return client.unwrap_key(algo, key)
+# def unwrap(client, algo, key):
+#     return client.unwrap_key(algo, key)
 
 
 if __name__ == "__main__":
