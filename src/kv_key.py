@@ -20,11 +20,11 @@ def main():
 
     print(f"Encrypting")
     result = crypto_client.encrypt(EncryptionAlgorithm.rsa_oaep, plaintext)
-    print(f"result = {result}")
+    print(f"result.ciphertext = {result.ciphertext}")
 
     print(f"Decrypting")
     decrypted = crypto_client.decrypt(result.algorithm, result.ciphertext)
-    print(f"decrypted = {decrypted}")
+    print(f"decrypted.plaintext = {decrypted.plaintext}")
 
 
 if __name__ == "__main__":
