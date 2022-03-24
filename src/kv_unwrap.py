@@ -36,8 +36,8 @@ def main():
     # print(f"unwrap_result.algorithm = {unwrap_result.algorithm}")
 
 
-async def unwrap(client, algo, key):
-    return await client.unwrap_key(algo, key)
+def unwrap(client, algo, key):
+    return client.unwrap_key(algo, key)
 
 
 if __name__ == "__main__":
