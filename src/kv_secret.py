@@ -1,6 +1,7 @@
 import os
 from azure.keyvault.secrets import SecretClient
 from azure.identity import DefaultAzureCredential
+from datetime import datetime
 
 
 def main():
@@ -13,8 +14,9 @@ def main():
     # secretName = input("Input a name for your secret > ")
     # secretValue = input("Input a value for your secret > ")
 
-    secretName = "secretName104"
-    secretValue = "secretValue104-05555023"
+    d = datetime.now()
+    secretName = f"secretName{d}"
+    secretValue = f"secretValue{d}-{d}"
 
     print(
         f"Creating a secret in {keyVaultName} called '{secretName}' with the value '{secretValue}' ..."
