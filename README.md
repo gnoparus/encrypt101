@@ -6,3 +6,7 @@
 * pip install cryptography
 * pip install azure-identity azure-keyvault-secrets azure-keyvault-keys
 * curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash 
+
+# Environment variable
+* export KEY_VAULT_NAME=xxxxxxxx
+* export KEY_NAME=yyyyyyyy
