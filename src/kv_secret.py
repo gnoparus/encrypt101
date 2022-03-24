@@ -14,7 +14,7 @@ def main():
     # secretName = input("Input a name for your secret > ")
     # secretValue = input("Input a value for your secret > ")
 
-    d = datetime.now().strftime("%Y/%m/%d %H:%M")
+    d = datetime.now().strftime("%Y/%m/%d-%H:%M")
     secretName = f"secretName{d}"
     secretValue = f"secretValue{d}-{d}"
 
