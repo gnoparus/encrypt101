@@ -16,9 +16,9 @@ def main():
     print(f"Getting key {keyName} in key vault: {keyVaultName}")
     key = key_client.get_key(keyName)
     crypto_client = CryptographyClient(key, credential=credential)
-    plaintext = b"plaintext"
+    plaintext = b"Empower data scientists and developers to build, deploy, and manage high-quality models faster and with confidence."
 
-    print(f"Encrypting")
+    print(f"Encrypting plaintext = {plaintext}")
     result = crypto_client.encrypt(EncryptionAlgorithm.rsa_oaep, plaintext)
     print(f"result.ciphertext = {result.ciphertext}")
 
