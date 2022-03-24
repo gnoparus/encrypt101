@@ -4,6 +4,7 @@ from azure.identity import DefaultAzureCredential
 from azure.keyvault.keys import KeyClient
 from azure.keyvault.keys.crypto import CryptographyClient, EncryptionAlgorithm
 from azure.keyvault.keys.crypto import KeyWrapAlgorithm
+from black import assert_equivalent
 
 
 def main():
@@ -34,6 +35,8 @@ def main():
     print(f"unwrap_result = {unwrap_result}")
     print(f"unwrap_result.key = {unwrap_result.key}")
     print(f"unwrap_result.algorithm = {unwrap_result.algorithm}")
+
+    assert key_bytes == unwrap_result.key
 
 
 def unwrap(client, algo, key):
