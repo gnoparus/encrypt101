@@ -34,7 +34,7 @@ def main():
 
 
 async def unwrap(client, algo, key):
-    await client.unwrap_key(algo, key)
+    return await client.unwrap_key(algo, key)
 
 
 if __name__ == "__main__":
