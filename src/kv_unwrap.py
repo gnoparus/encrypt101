@@ -32,8 +32,8 @@ def main():
     unwrap_result = unwrap(crypto_client, KeyWrapAlgorithm.rsa_oaep, encrypted_key)
     time.sleep(5)
     print(f"unwrap_result = {unwrap_result}")
-    # print(f"unwrap_result.key = {unwrap_result.key}")
-    # print(f"unwrap_result.algorithm = {unwrap_result.algorithm}")
+    print(f"unwrap_result.key = {unwrap_result.key}")
+    print(f"unwrap_result.algorithm = {unwrap_result.algorithm}")
 
 
 def unwrap(client, algo, key):
